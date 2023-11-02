@@ -1,0 +1,1 @@
+SELECT OSIS.BookName AS folderName, BOOK.title AS BookName, chapterNo, sectionNo, commentNo, htmlText FROM BibleSectionData AS SEC JOIN Products.cmn_ISO639_2_CODE_OSIS AS OSIS ON SEC.bookNo=OSIS_id  JOIN BibleBookData AS BOOK ON SEC.bookNo=BOOK.bookNo WHERE Language_id=1 ORDER BY SEC.bookNo, chapterNo, sectionNo;
